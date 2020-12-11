@@ -26,7 +26,7 @@ router.post('/', verify, async( ctx, next ) => {
         case 'thanks':
           return ctx.body = { type: 3, data: {
             tts: false,
-            content: `<@${ctx.request.body.member.user.id}>님이 <@${ctx.request.body.data.options[0].value}>님에게 감사를 표합니다!`,
+            content: `<@${ctx.request.body.member.user.id}>님이 <${ctx.request.body.data.options[0].value}>님에게 감사를 표합니다!`,
             flags: 1 << 1
           } }
         case '고양이':
