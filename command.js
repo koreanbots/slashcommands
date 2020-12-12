@@ -36,7 +36,7 @@ router.post('/', verify, async( ctx, next ) => {
           }
         case '이것저것테스트':
           return ctx.body = {
-            type: 4, data: {
+            type: 3, data: {
               content: '이건 테스트에요! 아무것도 없어요!',
               flags: 1 << 6
             }
