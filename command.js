@@ -26,13 +26,19 @@ router.post('/', verify, async( ctx, next ) => {
         case 'thanks':
           return ctx.body = { type: 3, data: {
             tts: false,
-            content: `<@${ctx.request.body.member.user.id}>님이 <@${ctx.request.body.data.options[0].value}>님에게 감사를 표합니다!`,
-            flags: 1 << 1
+            content: `<@${ctx.request.body.member.user.id}>님이 <@${ctx.request.body.data.options[0].value}>님에게 감사를 표합니다!`
           } }
         case '고양이':
           return ctx.body = {
             type: 4, data: {
               content: `https://cataas.com/cat?fakeQueryString=${ctx.request.body.id}&size=${ctx.request.body.data.options[0].value}`
+            }
+          }
+        case '이것저것테스트':
+          return ctx.body = {
+            type: 4, data: {
+              content: '이건 테스트에요! 아무것도 없어요!',
+              flags: 1 << 6
             }
           }
       }
