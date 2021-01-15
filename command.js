@@ -41,6 +41,12 @@ router.post('/', verify, async( ctx, next ) => {
               flags: 1 << 6
             }
           }
+          case '아이유':
+            return ctx.body = {
+              type: 4, data: {
+                content: `https://iu.wonder.im/images/${ctx.request.body.data.options[0].value}/?preventCache=${ctx.request.body.id}`
+              }
+            }
       }
   }
 })

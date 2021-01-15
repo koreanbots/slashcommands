@@ -48,11 +48,11 @@ cat = {
 }
 
 test = {
-  "name": "이것저것테스트",
+  "name": "이것",
   "description": "테스트 is best",
   "options": [
     {
-      "name": "role",
+      "name": "역할",
       "description": "역할",
       "type": 8
     },
@@ -79,7 +79,30 @@ test = {
   ]
 }
 
-json = test
+iu = {
+  "name": "아이유",
+  "description": "❤️",
+  "options": [
+    {
+      "name": "type",
+      "description": "사진의 타입입니다.",
+      "type": 3,
+      "required": True,
+      "choices": [
+        {
+          "value": "gif",
+          "name": "GIF 이미지"
+        },
+        {
+          "value": "profile",
+          "name": "프로필 이미지"
+        }
+      ]
+    }
+  ]
+}
+
+json = iu
 
 # For authorization, you can use either your bot token 
 headers = {
